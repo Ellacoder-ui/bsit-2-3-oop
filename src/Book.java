@@ -1,16 +1,16 @@
 public class Book {
-    // Attributes
+   
     String title;
     String author;
     int pages;
     boolean isAvailable;
 
-    // Constructor
+    
     public Book(String title, String author, int pages) {
         this.title = title;
         this.author = author;
         this.pages = pages;
-        this.isAvailable = true;  // Default to true
+        this.isAvailable = true; 
         System.out.println("A new book '" + title + "' by " + author + " has been added to the library!");
     }
 
@@ -24,7 +24,6 @@ public class Book {
 
     }
 
-    // Method to borrow the book
     public void borrowBook() {
         if (isAvailable) {
             isAvailable = false;
@@ -34,7 +33,6 @@ public class Book {
         }
     }
 
-    // Method to return the book
     public void returnBook() {
         isAvailable = true;
         System.out.println("Book Returned");
