@@ -14,19 +14,17 @@ class Student {
         grade3 = Grade3;
     }
 
-    // Method to display student info
+
     public void displayInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Course: " + course);
+        System.out.println("Name: " + name +","+ "Age: " + age +"," + "Course: " + course);
+        System.out.println("Grades:" + grade1 + " ,"  + grade2 +" ,"  + grade3);
     }
 
-    // Method to calculate average
+
     public double calculateAverage() {
         return (grade1 + grade2 + grade3) / 3;
     }
 
-    // Method to get letter grade
     public String getLetterGrade() {
         double avg = calculateAverage();
         if (avg >= 90) {
@@ -42,7 +40,7 @@ class Student {
         }
     }
 
-    // Method to check if student is passing
+
     public boolean isPassing() {
         double avg = calculateAverage();
         if (avg >= 70) {
