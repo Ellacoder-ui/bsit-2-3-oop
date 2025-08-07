@@ -3,7 +3,7 @@ public class Main {
 
         Student s1 = new Student("Ella", 20, "BSIT", 90, 90, 90);
         Student s2 = new Student("Ben", 21, "BSIT", 90, 90, 90);
-        Student s3 = new Student("Cara", 22, "BSIT", 90, 90, 90);
+        Student s3 = new Student("Cara", 22, "BSIT", 60, 60, 90);
 
         int passingCount = 0;
 
