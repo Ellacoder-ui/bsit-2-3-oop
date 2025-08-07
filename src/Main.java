@@ -7,7 +7,7 @@ public class Main {
 
         int passingCount = 0;
 
-        // Process first student
+
         System.out.println();
         s1.displayInfo();
         double avg1 = s1.calculateAverage();
@@ -22,8 +22,8 @@ public class Main {
             System.out.println("Status: FAILING");
         }
 
-        // Process second student
         System.out.println();
+
         s2.displayInfo();
         double avg2 = s2.calculateAverage();
         System.out.println("Average: " + avg2);
@@ -37,7 +37,7 @@ public class Main {
             System.out.println("Status: FAILING");
         }
 
-        // Process third student
+        // process
         System.out.println();
         s3.displayInfo();
         double avg3 = s3.calculateAverage();
