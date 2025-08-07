@@ -1,8 +1,58 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Test Branch");
+        Student s1 = new Student("Ella", 20, "BSIT", 90, 90, 90);
+        Student s2 = new Student("Ben", 21, "BSIT", 90, 90, 90);
+        Student s3 = new Student("Cara", 22, "BSIT", 90, 90, 90);
+
+        int passingCount = 0;
+
+        // Process first student
+        System.out.println();
+        s1.displayInfo();
+        double avg1 = s1.calculateAverage();
+        System.out.println("Average: " + avg1);
+        String grade1 = s1.getLetterGrade();
+        System.out.println("Letter Grade: " + grade1);
+        boolean pass1 = s1.isPassing();
+        if (pass1) {
+            System.out.println("Status: PASSING");
+            passingCount++;
+        } else {
+            System.out.println("Status: FAILING");
+        }
+
+        // Process second student
+        System.out.println();
+        s2.displayInfo();
+        double avg2 = s2.calculateAverage();
+        System.out.println("Average: " + avg2);
+        String grade2 = s2.getLetterGrade();
+        System.out.println("Letter Grade: " + grade2);
+        boolean pass2 = s2.isPassing();
+        if (pass2) {
+            System.out.println("Status: PASSING");
+            passingCount++;
+        } else {
+            System.out.println("Status: FAILING");
+        }
+
+        // Process third student
+        System.out.println();
+        s3.displayInfo();
+        double avg3 = s3.calculateAverage();
+        System.out.println("Average: " + avg3);
+        String grade3 = s3.getLetterGrade();
+        System.out.println("Letter Grade: " + grade3);
+        boolean pass3 = s3.isPassing();
+        if (pass3) {
+            System.out.println("Status: PASSING");
+            passingCount++;
+        } else {
+            System.out.println("Status: FAILING");
+        }
+
+        System.out.println();
+        System.out.println("Summary: " + passingCount + " out of 3 students are passing.");
     }
 }
