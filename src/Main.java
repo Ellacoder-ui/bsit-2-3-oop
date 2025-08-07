@@ -1,58 +1,54 @@
-public class Main {
-    public static void main(String[] args) {
+class Student {
+    String name = "";
+    int age = 0;
+    String course = "";
+    double grade1, grade2, grade3;
 
-        Student s1 = new Student("Ella", 20, "BSIT", 90, 90, 90);
-        Student s2 = new Student("Ben", 21, "BSIT", 90, 90, 90);
-        Student s3 = new Student("Cara", 22, "BSIT", 60, 60, 60);
+    // Constructor
+    public Student(String Name, int Age, String Course, double Grade1, double Grade2, double Grade3) {
+        name = Name;
+        age = Age;
+        course = Course;
+        grade1 = Grade1;
+        grade2 = Grade2;
+        grade3 = Grade3;
+    }
 
-        int passingCount = 0;
+    // Method to display student info
+    public void displayInfo() {
+        System.out.println("Name: " + name +","+ "Age: " + age +"," + "Course: " + course);
+        System.out.println("Grades:" + grade1 + " ,"  + grade2 +" ,"  + grade3);
+    }
 
+    // Method to calculate average
+    public double calculateAverage() {
+        return (grade1 + grade2 + grade3) / 3;
+    }
 
-        System.out.println();
-        s1.displayInfo();
-        double avg1 = s1.calculateAverage();
-        System.out.println("Average: " + avg1);
-        String grade1 = s1.getLetterGrade();
-        System.out.println("Letter Grade: " + grade1);
-        boolean pass1 = s1.isPassing();
-        if (pass1) {
-            System.out.println("Status: PASSING");
-            passingCount++;
+    // Method to get letter grade
+    public String getLetterGrade() {
+        double avg = calculateAverage();
+        if (avg >= 90) {
+            return "A";
+        } else if (avg >= 80) {
+            return "B";
+        } else if (avg >= 70) {
+            return "C";
+        } else if (avg >= 60) {
+            return "D";
         } else {
-            System.out.println("Status: FAILING");
+            return "F";
         }
+    }
 
-        System.out.println();
-
-        s2.displayInfo();
-        double avg2 = s2.calculateAverage();
-        System.out.println("Average: " + avg2);
-        String grade2 = s2.getLetterGrade();
-        System.out.println("Letter Grade: " + grade2);
-        boolean pass2 = s2.isPassing();
-        if (pass2) {
-            System.out.println("Status: PASSING");
-            passingCount++;
+    // Method to check if student is passing
+    public boolean isPassing() {
+        double avg = calculateAverage();
+        if (avg >= 70) {
+            return true;
         } else {
-            System.out.println("Status: FAILING");
+            return false;
         }
-
-        // process
-        System.out.println();
-        s3.displayInfo();
-        double avg3 = s3.calculateAverage();
-        System.out.println("Average: " + avg3);
-        String grade3 = s3.getLetterGrade();
-        System.out.println("Letter Grade: " + grade3);
-        boolean pass3 = s3.isPassing();
-        if (pass3) {
-            System.out.println("Status: PASSING");
-            passingCount++;
-        } else {
-            System.out.println("Status: FAILING");
-        }
-
-        System.out.println();
-        System.out.println("Summary: " + passingCount + " out of 3 students are passing.");
     }
 }
+
