@@ -1,6 +1,6 @@
 public class GradeCalculator {
 
-    //average
+    
     public double calculateAverage(double... grades) {
         if (grades.length == 0) {
             return 0.0;
@@ -9,10 +9,10 @@ public class GradeCalculator {
         for (double grade : grades) {
             sum += grade;
         }
-        return sum /4;
+        return sum /4; //average
     }
 
- // iyang letter grade
+     // iyang letter grade
     public String getLetterGrade(double average) {
         if (average >= 90 && average <= 100) {
             return "A";
