@@ -27,7 +27,7 @@ public class GradeCalculator {
         }
     }
 
-// pag display sa all
+    // pag display sa all
     public void displayResult(String studentName, double average) {
         System.out.println("Student: " + studentName + ", Average: " + average);
     }
