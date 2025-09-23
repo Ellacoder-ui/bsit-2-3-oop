@@ -1,8 +1,21 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        // Creating instances of pets
+        Pet buddy = new Dog("Buddy", 3);
+        Pet whiskers = new Cat("Whiskers", 2);
+        Pet tweety = new Bird("Tweety", 1);
 
-        System.out.println("Test Branch");
+        // Displaying pet info
+        buddy.displayInfo();
+        whiskers.displayInfo();
+        tweety.displayInfo();
+
+        // Creating instances of trainable pets
+        Trainable dog = new Dog("Buddy", 3);
+        Trainable bird = new Bird("Tweety", 1);
+
+        // Training pets
+        dog.performTrick();
+        bird.performTrick();
     }
 }
